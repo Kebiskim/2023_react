@@ -1,0 +1,10 @@
+.box{
+    width: 700px;
+    height: 700px;
+    background-color: rgb(71, 212, 255);
+    font-size: 550px;
+    color: white;
+}
+.fg{
+    color:rgb(255, 0, 170);
+}
