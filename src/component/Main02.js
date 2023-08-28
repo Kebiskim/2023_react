@@ -129,11 +129,21 @@ export default function Main02() {
         // contextControl = <li><a href={"/update/"+id}>Update</a></li>
         // 나중에 수정tag가 들어갈 것이라서 빈 꺽쇠 들어감.
         contextControl = <>
-            <li><a href={"/update/"+id} onClick={(e)=>{
-                e.preventDefault();
-                setMode('UPDATE');
-            }}>Update</a></li>
-            </>
+                            <li><a href={"/update/"+id} onClick={(e)=>{
+                                e.preventDefault();
+                                setMode('UPDATE');
+                            }}>Update</a></li>
+                            <li><input type="button" value="Delete" onClick={()=>{
+                                // 선택한 객체를 뺀 나머지를 담고 보여주기 위함
+                                const newTops = [];
+                                for (let i = 0; i < top.length; i++) {
+                                    if(top[i].id !== Number(id)){
+                                        newTops.push(top[i]);
+                                    }
+                                }
+                                setTop(newTops);
+                            }} /></li>
+                        </>
     }else if(mode === 'CREATE'){
         content = <Create onCreate={(_title, _body)=>{
 
