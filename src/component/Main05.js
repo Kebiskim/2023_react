@@ -4,7 +4,7 @@ import { createStore } from "redux";
 // 첫글자가 대문자 => Provider는 컴포넌트!!
 import { Provider, useSelector, useDispatch } from 'react-redux';
 
-// 1. props에 대한 정보를 모두 삭제하자.
+// 1. props에 대한 정보를 모두 삭제하자.a
 // 2. redux를 설치하자
 // ** npm install react-redux
 
